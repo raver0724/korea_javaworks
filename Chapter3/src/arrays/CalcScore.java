@@ -8,10 +8,10 @@ public class CalcScore {
 		// 성적 처리 프로그램 - 사용자 입력 방식
 		boolean run = true; //프로그램 시작과 종료 - 스위치 변수
 		int studentNum = 0; //학생수를 저장할 변수
-		int[] scores = null; //점수를 저장할 배열
+		int[] scores = null; //점수를 저장할 배열(개체)
 		Scanner sc = new Scanner(System.in);
 		
-		while(true) {
+		while(run) {
 			System.out.println("================================");
 			System.out.println("1. 학생수 | 2. 점수입력 | 3. 점수리스트 | 4. 분석 | 5. 종료");
 			System.out.println("================================");
@@ -24,16 +24,39 @@ public class CalcScore {
 			scores = new int[studentNum];
 			break;
 			case 2:
-				for(int i=0; i<scores.length; i++) {
+				if(scores != null)//배열이 null이 아닐때 수행함
+				{				for(int i=0; i<scores.length; i++) {
 					System.out.print("scores[" + i + "]");
 					scores[i] = sc.nextInt();
 				}
+				}
 				break;
 			case 3:
+				if(scores != null)//배열이 null이 아닐때 수행함
+				{
 				for(int i=0; i<scores.length; i++) {
 				System.out.println("scores[" + i + "]=" + scores[i]);
+				
 			}
-			break;
+				} break;
+			case 4:
+				if(scores != null) {//배열이 null이 아닐때 수행함
+					int sum = 0; //합계
+					double avg; //평균
+					int max;
+					max = scores[0];
+					
+					for(int i=0; i<scores.length; i++) {
+						sum += scores[i]; //sum = sum + scores[i]
+					if(scores[i] > max)
+						max = scores[i];
+					}
+					avg = (double)sum / scores.length;
+					//System.out.println("평균 점수: " + avg);
+					System.out.printf("평균 점수: %1.f\n ", avg);
+					System.out.println("최고 점수: " + max);
+				}break;
+			
 			case 5:
 				System.out.println("프로그램을 종료합니다");
 				run = false;
