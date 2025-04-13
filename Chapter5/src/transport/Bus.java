@@ -13,7 +13,7 @@ public class Bus {
 	
 	//승객을 태우는 매서드
 	public void take(int money) {
-		this.money = money; // this.money = this.money + money
+		this.money += money; // this.money = this.money + money
 		passenger++;
 	}
 	
