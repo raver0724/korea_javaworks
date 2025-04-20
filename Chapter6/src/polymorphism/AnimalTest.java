@@ -52,7 +52,6 @@ public class AnimalTest {
 		aTest.moveAnimal(new Horse());
 		aTest.moveAnimal(new Eagle());
 		
-		
 	}
 
 }
