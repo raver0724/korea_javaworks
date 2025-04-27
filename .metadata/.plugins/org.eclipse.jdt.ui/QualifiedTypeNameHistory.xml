@@ -10,4 +10,6 @@
     <fullyQualifiedTypeName name="sun.java2d.opengl.WGLSurfaceData.WGLVSyncOffScreenSurfaceData"/>
     <fullyQualifiedTypeName name="javax.security.auth.Subject"/>
     <fullyQualifiedTypeName name="reference.score2.Student"/>
+    <fullyQualifiedTypeName name="wrapper.IntegerTest"/>
+    <fullyQualifiedTypeName name="java.lang.ClassNotFoundException"/>
 </qualifiedTypeNameHistroy>
