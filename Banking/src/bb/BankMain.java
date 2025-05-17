@@ -17,6 +17,8 @@ public class BankMain {
 			System.out.println("==========================");
 			System.out.print("선택> ");
 			
+			try {
+			
 			int selectNum = Integer.parseInt(scan.nextLine());
 			
 			switch(selectNum) {
@@ -40,7 +42,10 @@ public class BankMain {
 				System.out.println("지원되지 않는 기능입니다. 다시 입력하세요. ");
 				break;
 			}
-		} //와일 닫기
+		}catch(NumberFormatException e) {
+			System.out.println("잘못된 입력입니다. 다시 입력하세요");
+		}
+		}//와일 닫기
 		scan.close();
 	} //메인 닫기
 	
@@ -63,7 +68,8 @@ public class BankMain {
 			}else {
 			account.setBalance(account.getBalance()-amount);
 			System.out.println("정상 출금되었습니다. 현재잔액: " + account.getBalance());}
-			}else {
+			}
+		else {
 			System.out.println("계좌가 없습니다.");
 		}}
 	
